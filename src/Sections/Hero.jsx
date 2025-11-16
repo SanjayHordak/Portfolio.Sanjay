@@ -1,12 +1,14 @@
 import { Canvas, useFrame } from "@react-three/fiber"
 import Herotext from "../components/Herotext"
 import ParallaxBackground from "../components/ParallaxBackground"
-import {Astronaut} from "../components/Astronaut"
 import { Float } from "@react-three/drei"
 import { useMediaQuery } from "react-responsive"
 import { easing } from "maath"
-import { Suspense } from "react"
+import { Suspense, lazy } from "react"
 import Loader from "../components/Loader"
+
+// Lazy load the heavy 3D model
+const Astronaut = lazy(() => import("../components/Astronaut").then(module => ({ default: module.Astronaut })));
 
 const Hero = () => {
     const isMobile=useMediaQuery({maxWidth:853})

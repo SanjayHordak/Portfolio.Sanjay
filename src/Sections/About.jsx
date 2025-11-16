@@ -1,8 +1,10 @@
-import { useRef } from "react"
+import { useRef, Suspense, lazy } from "react"
 import Card from "../components/Card"
-import { Globe } from "../components/Globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import {FrameWorks} from "../components/FrameWorks";
+
+// Lazy load heavy components
+const Globe = lazy(() => import("../components/Globe").then(module => ({ default: module.Globe })));
 
 const About = () => {
     const grid2Container=useRef();
@@ -94,7 +96,9 @@ const About = () => {
                 </p>
                </div>
                <figure className="absolute left-[30%] top-[10%]">
-                <Globe />
+                <Suspense fallback={<div className="animate-pulse bg-gray-700 rounded-full w-32 h-32"></div>}>
+                  <Globe />
+                </Suspense>
                </figure>
            </div>
            {/* Grid 4 */}
