@@ -1,6 +1,5 @@
 "use client";;
 import { useScroll, useTransform, motion } from "motion/react";
-import { p } from "motion/react-client";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Timeline = ({
