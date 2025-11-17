@@ -253,7 +253,7 @@ export const mySocials = [
 export const experiences = [
   {
     title: "Reactjs Developer",
-    job: "Hospital Management System",
+    job: "Camerin Innovate",
     date: "2025-Present",
     contents: [
       "Developed the frontend for Hospital Management Information System (MIS) with modern UI/UX practices.",
