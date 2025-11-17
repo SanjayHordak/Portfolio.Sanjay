@@ -33,12 +33,12 @@ const Contact = () => {
         setisLoading(true);
        try {
          await emailjs.send(
-            "service_kajrb8m",
+            "service_kkpi0ol",
             "template_sjkhi8t",{
                 from_name: formData.name,
                 to_name: "Sanjaykumar. S",
                 from_email: formData.email,
-                to_email:"sanjaykumar-s@outlook.com",
+                to_email:"sanjays09082000@gmail.com",
                 message: formData.message,
                 
             }, "Wrfy2alKihpgpJ3B-");
